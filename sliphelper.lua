@@ -2,36 +2,7 @@
 -- Addon Information
 ----------------------------------------------------------------------------------------------------
 _addon.name = 'SlipHelper'
-_addon.author = 'Persona'
-_addon.version = '2.0.0' -- Major version change for new system
-_addon.commands = {'slip'}
-
-----------------------------------------------------------------------------------------------------
--- Dependencies & Setup
-----------------------------------------------------------------------------------------------------
-require('coroutine')
-require('luau')
-local files = require('files')
-
--- Define the path for our data files
-local data_path = 'data'
-
--- Ensure the data directory exists before trying to write to it.
--- This uses a more direct Windower function for directory creation.
-if not windower.dir_exists(windower.addon_path .. data_path) then
-    windower.create_dir(windower.addon_path .. data_path)
-    log('SlipHelper: Created data directory at: '.. windower.addon_path .. data_path)
-end
-
-----------------------------------------------------------------------------------------------------
--- DATA: Slip Definitions
-----------------------------------------------------------------------------------------------------
-local slip_definitions = {
-    ----------------------------------------------------------------------------------------------------
--- DATA: Slip Definitions
---
--- !! IMPORTANT !!
--- This is the section you need to edit to add items for each storage slip.
+_addon.author = t78ol789pilguuluon you need to edit to add items for each storage slip.
 ----------------------------------------------------------------------------------------------------
     ['Slip 01'] = {
         name = 'Storage Slip 01',
@@ -511,4 +482,5 @@ windower.register_event('addon command', function(...)
     else
         windower.add_to_chat(167, 'SlipHelper Error: Unknown command. Use "//slip help" for a list of commands.')
     end
+
 end)
